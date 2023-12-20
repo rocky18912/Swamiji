@@ -149,4 +149,126 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1351px) {
+    margin: 0;
+    padding: 0;
+    span {
+      margin: 0;
+      padding: 0;
+      font-size: 65px;
+      .decor {
+        font-size: 65px;
+      }
+    }
+    .wrap {
+      a {
+        padding: 10px 0;
+        font-size: 30px;
+      }
+    }
+    .buttons {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        min-height: 4rem;
+        min-width: 150px;
+        color: black;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    .disp {
+      img {
+        width: 600px;
+        height: 600px;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 0;
+    padding: 0;
+    span {
+      margin: 0;
+      padding: 0;
+      font-size: 55px;
+      .decor {
+        font-size: 55px;
+      }
+    }
+    .wrap {
+      a {
+        padding: 10px 0;
+        font-size: 22px;
+      }
+    }
+    .buttons {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        min-height: 3rem;
+        min-width: 120px;
+        color: black;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .disp {
+      img {
+        width: 95%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 376px) {
+    margin: 0;
+    padding: 0;
+    span {
+      margin: 0;
+      padding: 0;
+      font-size: 40px;
+      .decor {
+        font-size: 40px;
+      }
+    }
+    .wrap {
+      a {
+        padding: 10px 0;
+        font-size: 20px;
+      }
+    }
+    .buttons {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        min-height: 2.5rem;
+        min-width: 90px;
+        color: black;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .disp {
+      img {
+        width: 95%;
+      }
+    }
+  }
 `;

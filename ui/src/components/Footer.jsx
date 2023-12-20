@@ -112,4 +112,110 @@ const Container = styled.div`
       }
     }
   }
+  @media screen and (max-width: 1350px) {
+    .info {
+      flex-direction: column;
+      .left {
+        h2 {
+          padding-left: 27%;
+          font-size: 20px;
+          align-items: center;
+          justify-content: center;
+        }
+        .anchors {
+          /* padding-left: 50%; */
+          padding-top: 30px;
+          flex-direction: column;
+          gap: 30px;
+          padding-bottom: 30px;
+          align-items: center;
+        }
+        .socials {
+          display: flex;
+          padding-top: 30px;
+          gap: 30px;
+          padding-bottom: 30px;
+          align-items: center;
+          justify-content: center;
+          /* padding-left: 35%; */
+        }
+        .copyright {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        .img {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .info {
+      flex-direction: column;
+      .left {
+        h2 {
+          padding-left: 30px;
+          font-size: 20px;
+          align-items: center;
+          justify-content: center;
+        }
+        .anchors {
+          padding-top: 30px;
+          flex-direction: column;
+          gap: 10px;
+          padding-bottom: 30px;
+        }
+        .socials {
+          padding-left: 20%;
+        }
+      }
+      .right {
+        margin: 0;
+        padding: 0;
+        img {
+          margin-left: 4%;
+          padding: 0;
+          width: 85%;
+          height: 85%;
+        }
+        p {
+          margin-left: 38px;
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .badge {
+      h1 {
+        display: none;
+      }
+    }
+    .info {
+      .left {
+        h2 {
+          display: none;
+        }
+      }
+      .right {
+        display: none;
+      }
+    }
+  }
 `;

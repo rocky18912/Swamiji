@@ -60,6 +60,8 @@ export default function Modal() {
 }
 
 const Container = styled.div`
+  padding-top: 2vh;
+  z-index: 10;
   .disp {
     display: flex;
     gap: 2px;

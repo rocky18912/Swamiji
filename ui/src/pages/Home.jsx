@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import heroImg from "../assets/hero right.png";
 import x from "../assets/blob hero left.png";
@@ -10,16 +9,20 @@ import vwc from "../assets/vwc.png";
 import { FaAngleRight } from "react-icons/fa";
 import Corosal from "../components/Corosal";
 import Map from "../components/Map";
+import NewNavbar from "../components/NewNavbar";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
   return (
     <Container>
-      <Navbar isScrolled={isScrolled} />
+      <NewNavbar />
+      {/* <Navbar isScrolled={isScrolled} /> */}
       <div className="hero">
         <div className="disp-left">
           <div className="image-blob">
@@ -35,7 +38,14 @@ export default function Home() {
               inspiring youth, women, and children. Honored by the Prime
               Minister, he leads transformative journeys.
             </p>
-            <button className="butt-click">Click Here</button>
+            <button
+              className="butt-click"
+              onClick={() => {
+                navigate("/portfolio");
+              }}
+            >
+              Click Here
+            </button>
           </div>
         </div>
         <div className="disp-right">
@@ -96,6 +106,7 @@ export default function Home() {
 }
 
 const Container = styled.div`
+  /* background-color: red; */
   .vedic-wellness-center {
     padding: 3px 120px 30px 120px;
     .disp {
@@ -187,9 +198,8 @@ const Container = styled.div`
     width: 100%;
     padding-top: 4rem;
     display: flex;
-    flex: 50%;
     /* background-image: linear-gradient(to top, rgb(255, 234, 210), #fff); */
-    z-index: -3;
+    z-index: -1;
   }
   img {
     object-fit: cover;
@@ -198,7 +208,6 @@ const Container = styled.div`
   .disp-left {
     position: relative;
     padding-right: 60px;
-    background-image: url("../assets/blob hero left.png");
     .image-blob {
       padding-top: 225px;
     }
@@ -251,6 +260,340 @@ const Container = styled.div`
     align-items: center;
     &:hover {
       cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 481px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .hero {
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      .disp-left {
+        .image-blob {
+          img {
+            width: 70%;
+            padding-top: 45%;
+          }
+        }
+        .content {
+          h2 {
+            font-size: 34px;
+          }
+          h1 {
+            font-size: 58px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      .disp-right {
+        img {
+          width: 70%;
+          margin: 0;
+        }
+      }
+    }
+    .vedic-wellness-center,
+    .rupantran-yatra {
+      .disp {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+
+    .vedic-wellness-center {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .left {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .right {
+          img {
+            width: 90%;
+            height: 90%;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .rupantran-yatra {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .right {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          h2 {
+            font-size: 26px;
+          }
+          h3 {
+            font-size: 22px;
+            padding: 10px 0px;
+          }
+          a {
+            font-size: 26px;
+            padding: 10px 0px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .left {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .hero {
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      .disp-left {
+        .image-blob {
+          img {
+            width: 70%;
+            padding-top: 45%;
+          }
+        }
+        .content {
+          h2 {
+            font-size: 44px;
+          }
+          h1 {
+            font-size: 68px;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+      .disp-right {
+        img {
+          width: 70%;
+          margin: 0;
+        }
+      }
+    }
+    .vedic-wellness-center,
+    .rupantran-yatra {
+      .disp {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+
+    .vedic-wellness-center {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .left {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .right {
+          img {
+            width: 90%;
+            height: 90%;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .rupantran-yatra {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .right {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          h2 {
+            font-size: 26px;
+          }
+          h3 {
+            font-size: 22px;
+            padding: 10px 0px;
+          }
+          a {
+            font-size: 26px;
+            padding: 10px 0px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .left {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .hero {
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      .disp-left {
+        h2 {
+          font-size: 64px;
+        }
+        h1 {
+          font-size: 98px;
+        }
+        .image-blob {
+          img {
+            width: 70%;
+            padding-top: 5%;
+          }
+        }
+      }
+      .disp-right {
+        img {
+          display: none;
+        }
+      }
+    }
+    .vedic-wellness-center,
+    .rupantran-yatra {
+      .disp {
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+
+    .vedic-wellness-center {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .left {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .right {
+          padding: 0;
+          margin: 0;
+          img {
+            width: 90%;
+            height: 90%;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .rupantran-yatra {
+      margin: 0px 40px 0px 40px;
+      padding: 0;
+      .disp {
+        margin: 0;
+        padding: 0;
+        .right {
+          padding: 0;
+          margin: 0;
+          h1 {
+            font-size: 56px;
+          }
+          h2 {
+            font-size: 26px;
+          }
+          h3 {
+            font-size: 22px;
+            padding: 10px 0px;
+          }
+          a {
+            font-size: 26px;
+            padding: 10px 0px;
+          }
+          p {
+            font-weight: lighter;
+          }
+        }
+        .left {
+          img {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1401px) {
+    .hero {
+      margin: 0;
+      padding: 0;
+      .disp-left {
+        h2 {
+          font-size: 64px;
+        }
+        h1 {
+          font-size: 98px;
+        }
+        img {
+          width: 70%;
+          padding-top: 50%;
+          padding-bottom: 0px;
+        }
+      }
+      .disp-right {
+        img {
+          width: 70%;
+          margin-top: 50%;
+        }
+      }
     }
   }
 `;

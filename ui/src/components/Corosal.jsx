@@ -58,6 +58,7 @@ export default function Corosal() {
 }
 
 const Container = styled.div`
+  z-index: -50;
   margin: 0;
   padding: 0;
   padding-top: 20px;
@@ -87,8 +88,8 @@ const Container = styled.div`
     left: 0;
     width: 100%;
     padding-left: 45vw;
-    padding-top: 87px;
-    padding-bottom: 87px;
+    padding-top: 105px;
+    padding-bottom: 106px;
     background: rgba(0, 0, 0, 0.5);
     color: #fff;
     font-family: "Courier New", Courier, monospace;

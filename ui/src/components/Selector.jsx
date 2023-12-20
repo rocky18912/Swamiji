@@ -239,4 +239,87 @@ const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 1400px) {
+    padding: 40px;
+    .buttons {
+      overflow-y: auto;
+    }
+    .right {
+      img {
+        display: none;
+      }
+    }
+    .disp {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      .left {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        h1 {
+          font-size: 56px;
+          color: red;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 40px;
+    .buttons {
+      overflow-y: auto;
+    }
+    .right {
+      img {
+        display: none;
+      }
+    }
+    .disp {
+      padding: 0;
+      margin: 0;
+      .left {
+        padding: 0;
+        margin: 0;
+        h1 {
+          font-size: 56px;
+          color: red;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 40px;
+    .buttons {
+      overflow-y: auto;
+    }
+    .right {
+      img {
+        display: none;
+      }
+    }
+    .disp {
+      padding: 0;
+      margin: 0;
+      .left {
+        padding: 0;
+        margin: 0;
+        h1 {
+          font-size: 36px;
+          color: red;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
 `;
