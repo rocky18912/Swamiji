@@ -19,6 +19,10 @@ li{
 .navbar{
     height: 10vh;
     line-height: 10vh;
+    transition: all 0.8ms ease-in-out;
+}
+.scrolled{
+    
     box-shadow: rgba(50, 50,93,0.23) 0 30px 30px -20px ;
 }
 .container{

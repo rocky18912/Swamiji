@@ -21,7 +21,7 @@ export default function Home() {
   };
   return (
     <Container>
-      <NewNavbar />
+      <NewNavbar isScrolled={isScrolled} />
       {/* <Navbar isScrolled={isScrolled} /> */}
       <div className="hero">
         <div className="disp-left">

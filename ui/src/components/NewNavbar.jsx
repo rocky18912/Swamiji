@@ -7,12 +7,12 @@ import Modal from "./Modal";
 import logo from "../assets/logo.png";
 import styled from "styled-components";
 
-export default function NewNavbar() {
+export default function NewNavbar({ isScrolled }) {
   const [mobile, setMobile] = useState(false);
   const navigate = useNavigate();
   return (
     <Container>
-      <nav className="navbar">
+      <nav className={`${isScrolled ? "scrolled" : ""} navbar`}>
         <div className="container">
           <img src={logo} alt="" />
           <ul className={mobile ? "nav-links-mobile" : "nav-links"}>
@@ -66,6 +66,12 @@ export default function NewNavbar() {
 }
 
 const Container = styled.div`
+  .navbar {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+  }
   li {
     font-weight: 300;
     margin: 0 5px;
