@@ -13,8 +13,8 @@ export default function NewNavbar({ isScrolled }) {
   return (
     <Container>
       <nav className={`${isScrolled ? "scrolled" : ""} navbar`}>
-        <div className="container">
-          <img src={logo} alt="" />
+        <div className="container" onClick={() => navigate("/")}>
+          <img className="logo" src={logo} alt="" />
           <ul className={mobile ? "nav-links-mobile" : "nav-links"}>
             <li
               onClick={() => {
@@ -66,6 +66,27 @@ export default function NewNavbar({ isScrolled }) {
 }
 
 const Container = styled.div`
+  .logo {
+    cursor: pointer;
+  }
+  button {
+    margin: 3px;
+    color: #460954;
+    padding: 8px 12px 8px 12px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Helvetica;
+    font-weight: 500;
+    background-color: #02a66e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .navbar {
     position: fixed;
     width: 100%;

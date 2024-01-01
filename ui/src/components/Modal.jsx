@@ -85,6 +85,8 @@ const Container = styled.div`
   button {
     display: flex;
     width: 100%;
+    margin: 0;
+    padding: 0;
     margin: 3px;
     color: #460954;
     padding: 8px 12px 8px 12px;

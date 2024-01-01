@@ -22,7 +22,6 @@ li{
     transition: all 0.8ms ease-in-out;
 }
 .scrolled{
-    
     box-shadow: rgba(50, 50,93,0.23) 0 30px 30px -20px ;
 }
 .container{
@@ -32,7 +31,6 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-
 .nav-links li {
     color: black;
     font-size: 20px;
@@ -54,6 +52,7 @@ li{
         display: none;
     }
     .nav-links-mobile{
+        margin-top: 8vh;
         z-index: 100;
         position: absolute;
         display: block;

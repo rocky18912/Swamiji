@@ -89,7 +89,7 @@ export default function Home() {
               First time in the history of Prison Reforms such an initiative has
               been taken.
             </p>
-            <a href="">
+            <a href="" onClick={() => navigate("/rupantranyatra")}>
               See full Program
               <FaAngleRight />
             </a>
