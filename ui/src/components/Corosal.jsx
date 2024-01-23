@@ -1,6 +1,10 @@
 import React from "react";
 import map from "../assets/map.png";
 import styled from "styled-components";
+import one from "../assets/caro1.png";
+import two from "../assets/caro2.png";
+import three from "../assets/caro3.png";
+import four from "../assets/caro4.png";
 
 export default function Corosal() {
   return (
@@ -9,43 +13,43 @@ export default function Corosal() {
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={one} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={two} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={three} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={four} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={one} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={two} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={three} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={four} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={one} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={two} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={three} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={four} alt="map" />
             </div>
             <div className="slide">
-              <img src={map} alt="map" />
+              <img src={one} alt="map" />
             </div>
           </div>
           <div className="upper">

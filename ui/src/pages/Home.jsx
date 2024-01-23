@@ -11,6 +11,7 @@ import Corosal from "../components/Corosal";
 import Map from "../components/Map";
 import NewNavbar from "../components/NewNavbar";
 import { useNavigate } from "react-router-dom";
+import Plan from "../components/Plan";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -99,6 +100,7 @@ export default function Home() {
       <div className="display-section">
         <Selector />
       </div>
+      <Plan />
       <Map />
       <Footer />
     </Container>
